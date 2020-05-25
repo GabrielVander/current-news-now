@@ -1,0 +1,26 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+}
+
+type NewsImpl {
+    _author: String!
+    _category: [String!]!
+    _description: String!
+    _id: String!
+    _image: String!
+    _published: String!
+    _title: String!
+    _url: String!
+}
+
+type NewsResultImpl {
+    _news: [NewsImpl!]!
+    _page: Float!
+    _status: String!
+}
+
+type Query {
+    latestNews: NewsResultImpl!
+}

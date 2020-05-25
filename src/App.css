@@ -1,38 +1,39 @@
+@import '~antd/dist/antd.dark.css';
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  font-size: calc(1em + 1vw);
+  font-family: monaco, Consolas, Lucida Console, monospace;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  background: linear-gradient(270deg, #1c1e21, #1c1e21);
+  background-size: 400% 400%;
+
+  -webkit-animation: BackgroundAnimation 10s ease infinite;
+  -moz-animation: BackgroundAnimation 10s ease infinite;
+  animation: BackgroundAnimation 10s ease infinite;
+
 }
 
-.App-link {
-  color: #61dafb;
+@-webkit-keyframes BackgroundAnimation {
+  0%{background-position:0 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0 50%}
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@-moz-keyframes BackgroundAnimation {
+  0%{background-position:0 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0 50%}
+}
+@keyframes BackgroundAnimation {
+  0%{background-position:0 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0 50%}
 }

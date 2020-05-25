@@ -1,0 +1,5 @@
+.card {
+    background-color: #303237 !important;
+    border-radius: calc(1vw + 1vh);
+    max-width: 80vw;
+}

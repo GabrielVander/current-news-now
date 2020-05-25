@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MainPage from "./Components/MainPage/MainPage";
+import { ApolloProvider } from '@apollo/react-hooks';
+
+import ApolloClient from 'apollo-boost';
+import {environment} from "./environment";
+
+const client = new ApolloClient({
+    uri: environment.apollo.url,
+});
 
 function App() {
   return (
+  <ApolloProvider client={client}>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <MainPage/>
       </header>
     </div>
+  </ApolloProvider>
   );
 }
 
