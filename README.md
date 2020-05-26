@@ -1,4 +1,15 @@
+## Description
+Current News Now is a simple application that shows the lastest news in the past 5 minutes. This repository is a simple
+React UI that consumes the [Currents API](https://currentsapi.services/en) 
+through an [Apollo Server](https://github.com/GabrielVander/current-news-now-apollo). It's primary objective was to help me better understand both React website building and Typescript in general
+
+The application is deployed [here](https://current-news-now.herokuapp.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Environment variables
+
+- **REACT_APP_APOLLO_URL** - Apollo Server URL - defaults to `localhost`
 
 ## Available Scripts
 
